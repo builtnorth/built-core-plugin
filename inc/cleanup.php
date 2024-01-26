@@ -47,7 +47,7 @@ function remove_wp_icon_admin_bar(){
 add_action( 'login_head', __NAMESPACE__ . '\custom_login_logo', 100 );
 function custom_login_logo() {
 	if ( has_custom_logo() ) :
-		$image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+		$image = wp_get_attachment_image_src( get_option( 'site_logo' ), 'full' );
 		?>
 		<style type="text/css">
 			.login h1 a {
