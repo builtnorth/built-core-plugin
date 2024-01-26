@@ -1,0 +1,11 @@
+{
+    "name": "built-north/built-core",
+    "description": "Contains core functionality",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Dan Northern"
+        }
+    ],
+    "require": {}
+}
