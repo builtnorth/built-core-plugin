@@ -11,14 +11,13 @@
  *
  */
 
- namespace BuiltCore\Security;
+namespace BuiltCore\Security;
 
 
-  /**
-  * If this file is called directly, abort.
-  */
-  if ( ! defined( 'WPINC' ) ) { die; }
-
+/**
+ * If called directly, abort.
+ */
+if ( ! defined( 'WPINC' ) ) { die; }
 
 /**
  * Remove WP version info from head and feeds
@@ -80,7 +79,6 @@ function remove_x_pingback($headers) {
 	unset($headers['X-Pingback']);
 	return $headers;
 }
-
 
 /**
  * Define Settings

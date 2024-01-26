@@ -3,10 +3,10 @@
  * ------------------------------------------------------------------
  * Plugin: Built Core
  * ------------------------------------------------------------------
- * 
+ *
  * @package BuiltCore
  * @since BuiltCore 1.0.0
- * 
+ *
  * Plugin Name:       Built Core
  * Plugin URI:        https://builtnorth.co
  * Description:       Core functionality for the site. Adds security and hardening features and cleans up some default functionality.
@@ -20,14 +20,13 @@
  */
 
 
- /**
-  * If called directly, abort.
-  */
-  if ( ! defined( 'WPINC' ) ) { die; }
+/**
+ * If called directly, abort.
+ */
+if ( ! defined( 'WPINC' ) ) { die; }
 
 /**
  * Define plugin version.
- * 
  * @link https://semver.org
  */
 define( 'BUILT_CORE_VERSION', '1.0.0' );

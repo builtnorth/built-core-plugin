@@ -11,14 +11,13 @@
  *
  */
 
- namespace BuiltCore\Cleanup;
+namespace BuiltCore\Cleanup;
 
 
-  /**
-  * If this file is called directly, abort.
-  */
-  if ( ! defined( 'WPINC' ) ) { die; }
-
+/**
+ * If called directly, abort.
+ */
+if ( ! defined( 'WPINC' ) ) { die; }
 
 /**
  * Remove/Change "Howdy" text in admin menu
