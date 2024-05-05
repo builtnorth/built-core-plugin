@@ -96,6 +96,31 @@ function update_login_logo_text(){
 }
 
 /**
+ * Disable auto_core_update_send_email
+ */
+add_filter( 'auto_core_update_send_email', __NAMESPACE__ . '\auto_core_update_send_email');
+function auto_core_update_send_email(){
+	return false;
+}
+
+/**
+ * Disable auto_plugin_update_send_email
+ */
+add_filter( 'auto_plugin_update_send_email', __NAMESPACE__ . '\auto_plugin_update_send_email');
+function auto_plugin_update_send_email(){
+	return false;
+}
+
+/**
+ * Disable auto_theme_update_send_email
+ */
+add_filter( 'auto_theme_update_send_email', __NAMESPACE__ . '\auto_theme_update_send_email');
+function auto_theme_update_send_email(){
+	return false;
+}
+
+
+/**
  * Remove unnecessary code from wp_head
  */
 add_action('init', __NAMESPACE__ . '\remove_actions_from_head');
@@ -154,7 +179,6 @@ function remove_widgets_theme_support() {
 */
 add_action( 'admin_menu', __NAMESPACE__ . '\remove_metaboxes' );
 function remove_metaboxes() {
-	remove_meta_box( 'postcustom' , 'page' , 'normal' );
 	remove_meta_box( 'commentstatusdiv' , 'page' , 'normal' );
 	remove_meta_box( 'commentsdiv' , 'page' , 'normal' );
 	remove_meta_box( 'authordiv' , 'page' , 'normal' );
