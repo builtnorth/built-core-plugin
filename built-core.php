@@ -42,3 +42,24 @@ define( 'BUILT_CORE_PATH', plugin_dir_path( __FILE__ ) );
  */
 require_once BUILT_CORE_PATH . 'inc/security.php'; // Security
 require_once BUILT_CORE_PATH . 'inc/cleanup.php'; // Cleanup
+
+
+/**
+ * Plugin Updage Checker
+ * 
+ * @link https://github.com/YahnisElsts/plugin-update-checker?tab=readme-ov-file#getting-started
+ */
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/builtnorth/built-core-plugin',
+	__FILE__,
+	'built-core'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+//Optional: If you're using a private repository, specify the access token like this:
+//$myUpdateChecker->setAuthentication('your-token-here');
