@@ -8,7 +8,7 @@
  * @since BuiltCore 1.0.0
  *
  * Plugin Name:       Built Core
- * Plugin URI:        https://builtnorth.co
+ * Plugin URI:        
  * Description:       Core functionality for the site. Adds security and hardening features and cleans up some default functionality.
  * Version:           1.0.0
  * Author:            Built North
