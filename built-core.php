@@ -45,7 +45,7 @@ require_once BUILT_CORE_PATH . 'inc/cleanup.php'; // Cleanup
 
 
 /**
- * Plugin Updage Checker
+ * Plugin Update Checker
  * 
  * @link https://github.com/YahnisElsts/plugin-update-checker?tab=readme-ov-file#getting-started
  */
