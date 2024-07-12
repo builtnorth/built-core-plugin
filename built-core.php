@@ -46,7 +46,10 @@ require_once BUILT_CORE_PATH . 'inc/cleanup.php'; // Cleanup
 /**
  * Run only if active theme has enabled:
  * add_theme_support('built-disable-comments');
+ * Check needs to run after 'after_setup_theme', so 'init'
  */
-if (current_theme_supports('built-disable-comments')) {
-    require_once BUILT_CORE_PATH . 'inc/disable-comments.php'; // Disable Comments
-}
+add_action('init', function() {
+    if (current_theme_supports('built-disable-comments')) {
+        require_once BUILT_CORE_PATH . 'inc/disable-comments.php';
+    }
+});
