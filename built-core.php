@@ -10,7 +10,7 @@
  * Plugin Name:       Built Core
  * Plugin URI:        
  * Description:       Core functionality for the site. Adds security and hardening features and cleans up some default functionality.
- * Version:           1.1.1
+ * Version:           2.1.1
  * Author:            Built North
  * Author URI:        https://builtnorth.co
  * License:           GPL-2.0+
@@ -29,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) { die; }
  * Define plugin version.
  * @link https://semver.org
  */
-define( 'BUILT_CORE_VERSION', '1.1.1' );
+define( 'BUILT_CORE_VERSION', '2.1.1' );
 
 /**
  * Define global constants.
@@ -43,23 +43,10 @@ define( 'BUILT_CORE_PATH', plugin_dir_path( __FILE__ ) );
 require_once BUILT_CORE_PATH . 'inc/security.php'; // Security
 require_once BUILT_CORE_PATH . 'inc/cleanup.php'; // Cleanup
 
-
 /**
- * Plugin Update Checker
- * 
- * @link https://github.com/YahnisElsts/plugin-update-checker?tab=readme-ov-file#getting-started
+ * Run only if active theme has enabled:
+ * add_theme_support('built-disable-comments');
  */
-require 'plugin-update-checker/plugin-update-checker.php';
-use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
-
-$myUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://github.com/builtnorth/built-core-plugin',
-	__FILE__,
-	'built-core'
-);
-
-//Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('main');
-
-//Optional: If you're using a private repository, specify the access token like this:
-//$myUpdateChecker->setAuthentication('your-token-here');
+if (current_theme_supports('built-disable-comments')) {
+    require_once BUILT_CORE_PATH . 'inc/disable-comments.php'; // Disable Comments
+}
