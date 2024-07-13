@@ -29,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) { die; }
  * Define plugin version.
  * @link https://semver.org
  */
-define( 'BUILT_CORE_VERSION', '2.1.1' );
+define( 'BUILT_CORE_VERSION', '3.1.1' );
 
 /**
  * Define global constants.

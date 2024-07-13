@@ -1,10 +1,10 @@
 {
-    "name": "built-north/built-core",
+    "name": "builtnorth/built-core-plugin",
     "description": "Contains core functionality",
     "type": "wordpress-plugin",
     "authors": [
         {
-            "name": "Dan Northern"
+            "name": "Built North"
         }
     ],
     "require": {}
