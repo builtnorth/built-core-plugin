@@ -7,5 +7,7 @@
             "name": "Built North"
         }
     ],
-    "require": {}
+    "require": {
+        "composer/installers": "~1.0 || ~2.0"
+    }
 }
