@@ -1,5 +1,7 @@
 # Built Core Plugin
 
+See [wp-baseline](https://github.com/builtnorth/wp-baseline) instead. Same functionality to this plugin, but it's a drop-in composer package instead.
+
 Contains core functionality for WordPress websites. Adds security and hardening features and cleans up some default functionality.
 
 ### Requirements:
