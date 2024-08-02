@@ -1,8 +1,10 @@
 # Built Core Plugin
 
-> **See: [wp-baseline](https://github.com/builtnorth/wp-baseline) instead**. It contains similar functionality to this plugin, but it's a drop-in composer package library that can be easily added to plugins or themes.\*\*
+> **See: [builtnorth/wp-baseline](https://github.com/builtnorth/wp-baseline) instead**.
+>
+> Composer package/library that contains similar functionality to this plugin. The builtnorth/wp-baseline package can be easily added to plugins or themes.
 
-Contains core functionality for WordPress websites. Adds security and hardening features and cleans up some default functionality.
+Plugin that contains core functionality for WordPress websites. Adds security and hardening features, cleans up some default functionality, and optionally disables comments.
 
 ### Requirements:
 
