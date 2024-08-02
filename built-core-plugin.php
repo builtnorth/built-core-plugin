@@ -11,7 +11,7 @@
  * Plugin Name:       Built Core
  * Plugin URI:        
  * Description:       Core functionality for the site. Adds security and hardening features and cleans up some default functionality.
- * Version:           3.3.1
+ * Version:           3.4.1
  * Author:            Built North
  * Author URI:        https://builtnorth.co
  * License:           GPL-2.0+
@@ -32,7 +32,7 @@ if (!defined('WPINC')) {
  * Define plugin version.
  * @link https://semver.org
  */
-define('BUILT_CORE_VERSION', '3.3.1');
+define('BUILT_CORE_VERSION', '3.4.1');
 
 /**
  * Define global constants.
