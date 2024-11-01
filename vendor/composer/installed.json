@@ -2,24 +2,24 @@
     "packages": [
         {
             "name": "builtnorth/wp-baseline",
-            "version": "v2.1.0",
-            "version_normalized": "2.1.0.0",
+            "version": "v2.2.1",
+            "version_normalized": "2.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/builtnorth/wp-baseline.git",
-                "reference": "33b85e0ce434a9098a6b1bbeb64a86347a2338de"
+                "reference": "bb680a93e50b01a914d134161d91360a0fb20f2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/builtnorth/wp-baseline/zipball/33b85e0ce434a9098a6b1bbeb64a86347a2338de",
-                "reference": "33b85e0ce434a9098a6b1bbeb64a86347a2338de",
+                "url": "https://api.github.com/repos/builtnorth/wp-baseline/zipball/bb680a93e50b01a914d134161d91360a0fb20f2f",
+                "reference": "bb680a93e50b01a914d134161d91360a0fb20f2f",
                 "shasum": ""
             },
             "require": {
                 "enshrined/svg-sanitize": "^0.20.0",
                 "php": ">=8.1"
             },
-            "time": "2024-11-01T13:06:56+00:00",
+            "time": "2024-11-01T15:01:50+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -44,7 +44,7 @@
             "description": "Adds baseline functionality to WordPress. For example, security features, admin cleanup, svg sanitization, and more.",
             "support": {
                 "issues": "https://github.com/builtnorth/wp-baseline/issues",
-                "source": "https://github.com/builtnorth/wp-baseline/tree/v2.1.0"
+                "source": "https://github.com/builtnorth/wp-baseline/tree/v2.2.1"
             },
             "install-path": "../builtnorth/wp-baseline"
         },

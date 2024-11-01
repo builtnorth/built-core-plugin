@@ -54,10 +54,9 @@ class Login
 	 */
 	public function disable_autocomplete()
 	{
-		echo
-		'<script>
-            document.getElementById("user_login").autocomplete = "off";
-            document.getElementById("user_pass").autocomplete = "off";
-        </script>';
+		wp_add_inline_script('login', '
+			document.getElementById("user_login").autocomplete = "off";
+			document.getElementById("user_pass").autocomplete = "off";
+		');
 	}
 }
