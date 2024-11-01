@@ -1,0 +1,36 @@
+name: Create Release
+
+on:
+    push:
+        tags:
+            - "*"
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: "7.4"
+
+            - name: Install Composer Dependencies
+              run: composer install --no-dev --optimize-autoloader
+
+            - name: Create ZIP
+              run: |
+                  zip -r built-core-plugin.zip . \
+                  -x "*.git*" \
+                  -x "*.github*" \
+                  -x "*.gitignore" \
+                  -x "composer.json" \
+                  -x "composer.lock"
+
+            - name: Create Release
+              uses: softprops/action-gh-release@v1
+              with:
+                  files: built-core-plugin.zip
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

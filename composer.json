@@ -1,13 +1,25 @@
 {
     "name": "builtnorth/built-core-plugin",
-    "description": "Contains core functionality",
+    "description": "Contains core functionality that is used on BuiltNorth WordPress sites. Adds security and hardening features and cleans up some default functionality.",
     "type": "wordpress-plugin",
     "authors": [
         {
-            "name": "Built North"
+            "name": "Built North",
+            "email": "hello@builtnorth.co",
+            "homepage": "https://builtnorth.co"
+        },
+        {
+            "name": "Dan Northern",
+            "homepage": "https://dannorthern.com"
         }
     ],
     "require": {
-        "composer/installers": "~1.0 || ~2.0"
+        "composer/installers": "~1.0 || ~2.0",
+        "builtnorth/wp-baseline": "^2.1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     }
 }

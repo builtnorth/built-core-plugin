@@ -11,7 +11,7 @@
  * Plugin Name:       Built Core
  * Plugin URI:        
  * Description:       Core functionality for the site. Adds security and hardening features and cleans up some default functionality.
- * Version:           3.4.1
+ * Version:           4.0.0
  * Author:            Built North
  * Author URI:        https://builtnorth.co
  * License:           GPL-2.0+
@@ -20,39 +20,27 @@
  * Domain Path:       /languages
  */
 
+use WPBaseline;
+
+// Don't load directly.
+defined('ABSPATH') || exit;
+
 
 /**
- * If called directly, abort.
+ * Define Global Constants
+ * 
+ * Use SemVer - https://semver.org
  */
-if (!defined('WPINC')) {
-	die;
+define('BUILT_CORE_VERSION', '4.0.0');
+define('BUILT_CORE_FILE', __FILE__);
+define('BUILT_CORE_URL', plugin_dir_url(BUILT_CORE_FILE));
+define('BUILT_CORE_PATH', plugin_dir_path(BUILT_CORE_FILE));
+
+
+/**
+ * Initialize WPBaseline
+ */
+if (class_exists('WPBaseline\App')) {
+	$baseline = new WPBaseline\App;
+	$baseline->boot();
 }
-
-/**
- * Define plugin version.
- * @link https://semver.org
- */
-define('BUILT_CORE_VERSION', '3.4.1');
-
-/**
- * Define global constants.
- */
-define('BUILT_CORE_URL', plugin_dir_url(__FILE__));
-define('BUILT_CORE_PATH', plugin_dir_path(__FILE__));
-
-/**
- * Require plugin files.
- */
-require_once BUILT_CORE_PATH . 'inc/security.php'; // Security
-require_once BUILT_CORE_PATH . 'inc/cleanup.php'; // Cleanup
-
-/**
- * Run only if active theme has enabled:
- * add_theme_support('built-disable-comments');
- * Check needs to run after 'after_setup_theme', so 'init'
- */
-add_action('init', function () {
-	if (current_theme_supports('built-disable-comments')) {
-		require_once BUILT_CORE_PATH . 'inc/disable-comments.php';
-	}
-});

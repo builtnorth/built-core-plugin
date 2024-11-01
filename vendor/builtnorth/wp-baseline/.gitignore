@@ -9,20 +9,11 @@ bin/tasks
 _srcMaps/
 
 # Exclude composer dependencies in the vendor directory
-# /vendor - needed for releases
+/vendor
 composer.lock
-
-# Auth
-auth.json
 
 # Log files
 *.log
-
-#various
-wp-content/uploads/sites/*/gravity_forms
-wp-content/uploads/sites/*/wp-migrate-db
-wp-content/uploads/wpo-plugins-tables-list.json
-
 
 
 # Project Files
