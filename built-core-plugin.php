@@ -20,11 +20,8 @@
  * Domain Path:       /languages
  */
 
-use WPBaseline;
-
 // Don't load directly.
 defined('ABSPATH') || exit;
-
 
 /**
  * Define Global Constants
@@ -35,7 +32,6 @@ define('BUILT_CORE_VERSION', '4.0.5');
 define('BUILT_CORE_FILE', __FILE__);
 define('BUILT_CORE_URL', plugin_dir_url(BUILT_CORE_FILE));
 define('BUILT_CORE_PATH', plugin_dir_path(BUILT_CORE_FILE));
-
 
 /**
  * Initialize WPBaseline
